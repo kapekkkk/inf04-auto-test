@@ -1,0 +1,29 @@
+# Pliki tymczasowe
+*.pyc
+__pycache__/
+*.log
+*.tmp
+
+# Pliki pomocnicze (nie potrzebne w repo)
+inf04_questions (2).json
+debug_dom_structure.js
+test_in_console.js
+create_icons.html
+generate_icons.py
+
+# Backupy
+*.backup
+*.bak
+*~
+
+# System
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Klucze prywatne (jeśli kiedyś będą)
+*.pem
+*.key
+key.pem
+

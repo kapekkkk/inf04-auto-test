@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INF.04 Auto Test</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+    }
+    
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    
+    h2 {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .setting {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+    }
+    
+    input[type="number"]:focus {
+      outline: 2px solid #ffd700;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    #startBtn {
+      background: #4CAF50;
+      color: white;
+    }
+    
+    #startBtn:hover {
+      background: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    #stopBtn {
+      background: #f44336;
+      color: white;
+    }
+    
+    #stopBtn:hover {
+      background: #da190b;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .status {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .info {
+      margin-top: 15px;
+      font-size: 12px;
+      text-align: center;
+      opacity: 0.8;
+      line-height: 1.5;
+    }
+    
+    .warning {
+      background: rgba(255, 193, 7, 0.2);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🎓 INF.04 Auto Test</h2>
+    
+    <div class="warning">
+      ⚠️ Tylko do celów edukacyjnych!
+    </div>
+    
+    <div class="setting">
+      <label for="targetScore">🎯 Docelowy wynik (%):</label>
+      <input type="number" id="targetScore" min="0" max="100" value="75" step="5">
+    </div>
+    
+    <div class="setting">
+      <label for="delay">⏱️ Opóźnienie (ms):</label>
+      <input type="number" id="delay" min="100" max="5000" value="500" step="100">
+    </div>
+    
+    <div class="button-group">
+      <button id="startBtn">▶️ Start</button>
+      <button id="stopBtn">⏹️ Stop</button>
+    </div>
+    
+    <div class="status" id="status">
+      Gotowy do startu
+    </div>
+    
+    <div class="info">
+      Odśwież stronę z testem po zmianie ustawień
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+

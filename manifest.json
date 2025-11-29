@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "INF.04 Auto Test",
+  "version": "1.0.0",
+  "description": "Automatyczne rozwiązywanie testów INF.04 z kontrolą procentu poprawnych odpowiedzi",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://egzamin-programista.pl/*",
+    "https://www.praktycznyegzamin.pl/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://egzamin-programista.pl/testy-inf04-*"],
+      "js": ["questions_db.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+
