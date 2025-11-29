@@ -159,60 +159,8 @@ async function getAIAnswer(questionText, numOptions) {
 }
 ```
 
-## 🔧 Troubleshooting
-
-### ⚠️ Rozszerzenie wypełnia tylko 1 pytanie?
-
-**Diagnoza:**
-1. Naciśnij **F12** na stronie z testem (otwórz konsolę)
-2. Skopiuj i wklej zawartość `test_in_console.js`
-3. Sprawdź wyniki - powinno znaleźć ~40 pytań
-
-**Rozwiązanie:**
-- Odśwież stronę i poczekaj aż wszystko się załaduje
-- Sprawdź konsolę (F12) → szukaj czerwonych błędów
-- Przeładuj rozszerzenie: `chrome://extensions/` → kliknij ↻
-
-### Test się w ogóle nie wypełnia?
-1. Sprawdź URL: musi być `egzamin-programista.pl/testy-inf04-*`
-2. Kliknij ikonę rozszerzenia → **START**
-3. **ODŚWIEŻ STRONĘ** (Ctrl+R lub F5) ← To ważne!
-4. Sprawdź konsolę (F12) - czy są logi od rozszerzenia?
-
-### Nie znajduje pytań w bazie?
-- To normalne! Baza ma 417 pytań, ale test losuje z większej puli
-- Dla nieznanych pytań rozszerzenie losuje odpowiedzi
-- I tak osiągnie ustalony procent (np. 75%)
-
-### Chcę zmienić wynik?
-- Kliknij ikonę rozszerzenia
-- Zmień "Docelowy wynik" (np. 80%)
-- **START** → odśwież stronę
-
-### Debug mode:
-Otwórz konsolę (F12) i szukaj logów:
-```
-🎓 INF.04 Auto Test załadowany
-🔍 Szukam pytań na stronie...
-📝 Znaleziono X grup pytań
-```
-
-Jeśli nie widzisz tych logów → rozszerzenie się nie załadowało!
-
----
-
 ## 📝 Licencja
 
 Projekt edukacyjny - do użytku osobistego. Autor nie ponosi odpowiedzialności za niewłaściwe użycie.
 
-## 🎓 Podziękowania
-
-- Strona z testami: [egzamin-programista.pl](https://egzamin-programista.pl)
-- Baza pytań: [praktycznyegzamin.pl](https://www.praktycznyegzamin.pl)
-
----
-
-**Powodzenia na egzaminie! 🚀**
-
-*(Pamiętaj - to tylko narzędzie do nauki, nie do oszukiwania!)*
 
